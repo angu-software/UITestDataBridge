@@ -7,18 +7,20 @@
 
 import Foundation
 
-struct UITestDataBridgeSession {
+public struct UITestDataBridgeSession {
 
-    static let sessionIDEnvKey = "UI_TESTING_BRIDGE_SESSION_ID"
-
-    let sessionID: SessionID
+    public let sessionID: SessionID
 
     private var sharedResourceDirPath: String? {
         return ProcessInfo.processInfo.environment["SIMULATOR_SHARED_RESOURCES_DIRECTORY"]
     }
 
-    init() {
-        self.sessionID = .new()
+    public init() {
+        self.init(sessionID: .new())
+    }
+
+    init(sessionID: SessionID) {
+        self.sessionID = sessionID
     }
 
     /// Publishes data for a specific session and key.

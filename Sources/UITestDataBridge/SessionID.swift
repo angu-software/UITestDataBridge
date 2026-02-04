@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias SessionID = String
+public typealias SessionID = String
 
 extension SessionID {
 
