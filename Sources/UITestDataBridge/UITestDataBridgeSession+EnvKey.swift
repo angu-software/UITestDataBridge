@@ -8,7 +8,7 @@
 
 extension UITestDataBridgeSession {
 
-    static var sessionIDEnvKey: String {
+    package static var sessionIDEnvKey: String {
         "UI_TESTING_BRIDGE_SESSION_ID"
     }
 }

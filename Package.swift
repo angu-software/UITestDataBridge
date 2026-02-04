@@ -11,10 +11,18 @@ let package = Package(
             name: "UITestDataBridge",
             targets: ["UITestDataBridge"]
         ),
+        .library(
+            name: "XCTestDataBridge",
+            targets: ["XCTestDataBridge"]
+        ),
     ],
     targets: [
         .target(
             name: "UITestDataBridge"
+        ),
+        .target(
+            name: "XCTestDataBridge",
+            dependencies: ["UITestDataBridge"]
         ),
         .testTarget(
             name: "UITestDataBridgeTests",

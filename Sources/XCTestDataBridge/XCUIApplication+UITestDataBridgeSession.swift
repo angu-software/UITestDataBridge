@@ -9,6 +9,8 @@
 import Foundation
 import XCTest
 
+import UITestDataBridge
+
 extension XCUIApplication {
 
     public func attach(_ session: UITestDataBridgeSession) {

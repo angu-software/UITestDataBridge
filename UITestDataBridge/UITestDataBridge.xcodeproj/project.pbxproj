@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B32294982F33908E0011B073 /* UITestDataBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B32294972F33908E0011B073 /* UITestDataBridge */; };
-		B3D2969B2F338CD100E3D6E7 /* UITestDataBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B3D2969A2F338CD100E3D6E7 /* UITestDataBridge */; };
+		B322949A2F3393EE0011B073 /* XCTestDataBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B32294992F3393EE0011B073 /* XCTestDataBridge */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3D2969B2F338CD100E3D6E7 /* UITestDataBridge in Frameworks */,
+				B322949A2F3393EE0011B073 /* XCTestDataBridge in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +129,7 @@
 			);
 			name = UITestDataBridgeUITests;
 			packageProductDependencies = (
-				B3D2969A2F338CD100E3D6E7 /* UITestDataBridge */,
+				B32294992F3393EE0011B073 /* XCTestDataBridge */,
 			);
 			productName = UITestDataBridgeUITests;
 			productReference = B3D2967E2F338B6D00E3D6E7 /* UITestDataBridgeUITests.xctest */;
@@ -347,7 +347,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -379,7 +378,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -488,9 +486,10 @@
 			package = B3D296992F338CD100E3D6E7 /* XCLocalSwiftPackageReference "../../UITestDataBridge" */;
 			productName = UITestDataBridge;
 		};
-		B3D2969A2F338CD100E3D6E7 /* UITestDataBridge */ = {
+		B32294992F3393EE0011B073 /* XCTestDataBridge */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = UITestDataBridge;
+			package = B3D296992F338CD100E3D6E7 /* XCLocalSwiftPackageReference "../../UITestDataBridge" */;
+			productName = XCTestDataBridge;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

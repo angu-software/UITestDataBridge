@@ -10,6 +10,7 @@ import Foundation
 import XCTest
 
 import UITestDataBridge
+import XCTestDataBridge
 
 @MainActor
 final class AppDataBridgeSessionTests: XCTestCase {
