@@ -24,7 +24,7 @@ final class AppDataBridgeSessionTests: XCTestCase {
         XCTAssertTrue(sessionID(of: app) == session.sessionID)
     }
 
-    func test_givenPlublishingData_itReceivesDataInTheApp() async throws {
+    func test_givenPublishingData_itReceivesDataInTheApp() async throws {
         let session = newSession()
         let app = appWithAttachedSession(session)
         let dataContent = "Hello, App!"
