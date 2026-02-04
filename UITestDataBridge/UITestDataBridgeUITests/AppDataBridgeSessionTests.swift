@@ -21,7 +21,7 @@ final class AppDataBridgeSessionTests: XCTestCase {
 
         app.launch()
 
-        XCTAssertTrue(app.staticTexts["label_bridge_session_ID"].label == session.sessionID)
+        XCTAssertTrue(sessionID(of: app) == session.sessionID)
     }
 
     func test_givenPlublishingData_itReceivesDataInTheApp() async throws {
@@ -32,7 +32,7 @@ final class AppDataBridgeSessionTests: XCTestCase {
 
         app.launch()
 
-        XCTAssertTrue(app.staticTexts["label_bridge_session_data"].label == "Hello, World!")
+        XCTAssertTrue(dataReceivedInApp(app) == "Hello, World!")
     }
 
     private func newSession() -> UITestDataBridgeSession {
@@ -44,5 +44,13 @@ final class AppDataBridgeSessionTests: XCTestCase {
         app.attach(session)
 
         return app
+    }
+
+    private func sessionID(of app: XCUIApplication) -> String {
+        return app.staticTexts["label_bridge_session_ID"].label
+    }
+
+    private func dataReceivedInApp(_ app: XCUIApplication) -> String? {
+        return app.staticTexts["label_bridge_session_data"].label
     }
 }
