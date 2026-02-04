@@ -1,0 +1,15 @@
+//
+//  SessionError.swift
+//  UITestDataBridge
+//
+//  Created by Andreas Günther on 04.02.26.
+//  Copyright © 2026 Pandocs. All rights reserved.
+//
+
+import Foundation
+
+enum SessionError: Error {
+    case noActiveSessionOnCurrentProcess
+    case sharedSimulatorResourcesDirectoryNotFound
+    case writingDataToSharedResourcesFailed
+}
