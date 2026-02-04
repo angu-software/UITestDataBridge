@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum SessionError: Error {
+public enum SessionError: Error {
     case noActiveSessionOnCurrentProcess
     case sharedSimulatorResourcesDirectoryNotFound
     case writingDataToSharedResourcesFailed

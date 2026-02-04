@@ -28,7 +28,7 @@ public struct UITestDataBridgeSession {
     ///   - data: The data to publish.
     ///   - key: The key to associate with the data.
     ///   - sessionID: The unique session identifier.
-    func publishData(_ data: Data, forKey key: String) throws(SessionError) {
+    public func publishData(_ data: Data, forKey key: String) throws(SessionError) {
         guard let simulatorSharedDirectoryPath = sharedResourceDirPath else {
             throw .sharedSimulatorResourcesDirectoryNotFound
         }
@@ -48,7 +48,7 @@ public struct UITestDataBridgeSession {
     ///   - key: The key to retrieve data for.
     ///   - sessionID: The unique session identifier.
     /// - Returns: The retrieved data, or `nil` if not found.
-    func retrieveData(forKey key: String) throws(SessionError) -> Data? {
+    public func retrieveData(forKey key: String) throws(SessionError) -> Data? {
         guard let simulatorSharedDirectoryPath = sharedResourceDirPath else {
             throw .sharedSimulatorResourcesDirectoryNotFound
         }
