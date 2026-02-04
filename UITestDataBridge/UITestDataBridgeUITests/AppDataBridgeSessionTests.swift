@@ -36,6 +36,16 @@ final class AppDataBridgeSessionTests: XCTestCase {
         XCTAssertTrue(dataReceivedInApp(app) == dataContent)
     }
 
+    func test_whenAppPublishedData_itReceivesDataInTheTest() async throws {
+        let session = newSession()
+        let app = appWithAttachedSession(session)
+        app.launch()
+
+        sendDataFromApp(app)
+
+        XCTAssertTrue(dataSendFromApp(app) == dataReceivedFromApp(in: session))
+    }
+
     private func newSession() -> UITestDataBridgeSession {
         return UITestDataBridgeSession()
     }
@@ -53,5 +63,20 @@ final class AppDataBridgeSessionTests: XCTestCase {
 
     private func dataReceivedInApp(_ app: XCUIApplication) -> String? {
         return app.staticTexts["label_bridge_session_data"].label
+    }
+
+    private func dataSendFromApp(_ app: XCUIApplication) -> String? {
+        app.staticTexts["label_bridge_session_sending_data"].label
+    }
+
+    private func sendDataFromApp(_ app: XCUIApplication) {
+        app.buttons["button_bridge_session_send_data"].tap()
+    }
+
+    private func dataReceivedFromApp(in session: UITestDataBridgeSession) -> String? {
+        guard let receivedData = try? XCTUnwrap(session.retrieveData(forKey: "app_test_data")) else {
+            return nil
+        }
+        return String(data: receivedData, encoding: .utf8)
     }
 }

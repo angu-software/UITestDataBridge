@@ -10,17 +10,30 @@ import SwiftUI
 import UITestDataBridge
 
 struct ContentView: View {
+
+    private let dataToSend = "Hello, Test case"
+
     var body: some View {
         VStack {
             Text("UI data bridge session")
-                .fontWeight(.semibold)
+                .font(.title)
             Text(sessionID())
                 .accessibilityIdentifier("label_bridge_session_ID")
+            Spacer()
             Text("Received data")
                 .fontWeight(.semibold)
                 .italic()
             Text(sessionData())
                 .accessibilityIdentifier("label_bridge_session_data")
+            Spacer()
+            Text(dataToSend)
+                .accessibilityIdentifier("label_bridge_session_sending_data")
+            Button("Send data") {
+                sendData()
+            }
+            .buttonStyle(.borderedProminent)
+            .accessibilityIdentifier("button_bridge_session_send_data")
+            Spacer()
         }
         .padding()
     }
@@ -45,6 +58,11 @@ struct ContentView: View {
 
     private func currentBridgeSession() -> UITestDataBridgeSession? {
         return UITestDataBridgeSession.currentSession()
+    }
+
+    private func sendData() {
+        try? currentBridgeSession()?.publishData(dataToSend.data(using: .utf8)!,
+                                                 forKey: "app_test_data")
     }
 }
 
