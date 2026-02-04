@@ -27,6 +27,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		B322949D2F339D3C0011B073 /* TestPlans */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TestPlans;
+			sourceTree = "<group>";
+		};
 		B3D296692F338B6B00E3D6E7 /* UITestDataBridgeTestHost */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = UITestDataBridgeTestHost;
@@ -62,6 +67,7 @@
 		B3D2965E2F338B6B00E3D6E7 = {
 			isa = PBXGroup;
 			children = (
+				B322949D2F339D3C0011B073 /* TestPlans */,
 				B3D296692F338B6B00E3D6E7 /* UITestDataBridgeTestHost */,
 				B3D296812F338B6D00E3D6E7 /* UITestDataBridgeUITests */,
 				B3D296942F338BA500E3D6E7 /* Frameworks */,

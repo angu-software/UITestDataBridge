@@ -27,12 +27,13 @@ final class AppDataBridgeSessionTests: XCTestCase {
     func test_givenPlublishingData_itReceivesDataInTheApp() async throws {
         let session = newSession()
         let app = appWithAttachedSession(session)
+        let dataContent = "Hello, App!"
 
-        try session.publishData(Data("Hello, World!".utf8), forKey: "test_data")
+        try session.publishData(dataContent.data(using: .utf8)!, forKey: "test_data")
 
         app.launch()
 
-        XCTAssertTrue(dataReceivedInApp(app) == "Hello, World!")
+        XCTAssertTrue(dataReceivedInApp(app) == dataContent)
     }
 
     private func newSession() -> UITestDataBridgeSession {
