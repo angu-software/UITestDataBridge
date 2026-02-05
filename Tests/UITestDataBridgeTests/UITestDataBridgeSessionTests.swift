@@ -33,6 +33,16 @@ final class UITestDataBridgeSessionTests: XCTestCase {
 
         XCTAssertNil(receivedData)
     }
+
+    func test_givenEncodableValuePublished_whenReceivingData_itReturnsDecodedValueObject() async throws {
+        let encodedData = "Hello World"
+        let session = UITestDataBridgeSession()
+        try session.publish(encodedData, forKey: "hello")
+
+        let decodedData: String? = try session.retrieve(forKey: "hello")
+
+        XCTAssertEqual(encodedData, decodedData)
+    }
 }
 
 extension Data {

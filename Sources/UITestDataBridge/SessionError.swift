@@ -12,4 +12,6 @@ public enum SessionError: Error {
     case noActiveSessionOnCurrentProcess
     case sharedSimulatorResourcesDirectoryNotFound
     case writingDataToSharedResourcesFailed
+    case encodingOfDataFailed
+    case decodingOfDataFailed
 }
