@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B32294982F33908E0011B073 /* UITestDataBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B32294972F33908E0011B073 /* UITestDataBridge */; };
 		B322949A2F3393EE0011B073 /* XCTestDataBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B32294992F3393EE0011B073 /* XCTestDataBridge */; };
+		B3B4326E2F348C0000CB2D95 /* UITestDataBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B3B4326D2F348C0000CB2D95 /* UITestDataBridge */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B322949A2F3393EE0011B073 /* XCTestDataBridge in Frameworks */,
+				B3B4326E2F348C0000CB2D95 /* UITestDataBridge in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +138,7 @@
 			name = UITestDataBridgeUITests;
 			packageProductDependencies = (
 				B32294992F3393EE0011B073 /* XCTestDataBridge */,
+				B3B4326D2F348C0000CB2D95 /* UITestDataBridge */,
 			);
 			productName = UITestDataBridgeUITests;
 			productReference = B3D2967E2F338B6D00E3D6E7 /* UITestDataBridgeUITests.xctest */;
@@ -496,6 +499,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B3D296992F338CD100E3D6E7 /* XCLocalSwiftPackageReference "../../UITestDataBridge" */;
 			productName = XCTestDataBridge;
+		};
+		B3B4326D2F348C0000CB2D95 /* UITestDataBridge */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3D296992F338CD100E3D6E7 /* XCLocalSwiftPackageReference "../../UITestDataBridge" */;
+			productName = UITestDataBridge;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
