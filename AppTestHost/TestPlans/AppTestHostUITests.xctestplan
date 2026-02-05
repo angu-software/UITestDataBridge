@@ -19,11 +19,10 @@
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
       "target" : {
-        "containerPath" : "container:UITestDataBridge.xcodeproj",
+        "containerPath" : "container:AppTestHost.xcodeproj",
         "identifier" : "B3D2967D2F338B6D00E3D6E7",
-        "name" : "UITestDataBridgeUITests"
+        "name" : "AppTestHostUITests"
       }
     }
   ],

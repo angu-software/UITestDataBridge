@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B32294982F33908E0011B073 /* UITestDataBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B32294972F33908E0011B073 /* UITestDataBridge */; };
-		B322949A2F3393EE0011B073 /* XCTestDataBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B32294992F3393EE0011B073 /* XCTestDataBridge */; };
-		B3B4326E2F348C0000CB2D95 /* UITestDataBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B3B4326D2F348C0000CB2D95 /* UITestDataBridge */; };
+		B395E2FA2F34C4F000F8BE8D /* UITestDataBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B395E2F92F34C4F000F8BE8D /* UITestDataBridge */; };
+		B395E2FC2F34C4F000F8BE8D /* XCTestDataBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B395E2FB2F34C4F000F8BE8D /* XCTestDataBridge */; };
+		B395E2FE2F34C4F600F8BE8D /* UITestDataBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B395E2FD2F34C4F600F8BE8D /* UITestDataBridge */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,9 +23,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B3D296672F338B6B00E3D6E7 /* UITestDataBridgeTestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITestDataBridgeTestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3D2967E2F338B6D00E3D6E7 /* UITestDataBridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITestDataBridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3D296672F338B6B00E3D6E7 /* AppTestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3D2967E2F338B6D00E3D6E7 /* AppTestHostUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTestHostUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B395E2F52F34C45700F8BE8D /* Exceptions for "AppTestHost" folder in "AppTestHost" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				ContentView.swift,
+				UITestDataBridgeApp.swift,
+			);
+			target = B3D296662F338B6B00E3D6E7 /* AppTestHost */;
+		};
+		B395E2F72F34C45D00F8BE8D /* Exceptions for "AppTestHostUITests" folder in "AppTestHostUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppDataBridgeSessionTests.swift,
+			);
+			target = B3D2967D2F338B6D00E3D6E7 /* AppTestHostUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B322949D2F339D3C0011B073 /* TestPlans */ = {
@@ -33,14 +52,20 @@
 			path = TestPlans;
 			sourceTree = "<group>";
 		};
-		B3D296692F338B6B00E3D6E7 /* UITestDataBridgeTestHost */ = {
+		B395E2EF2F34C44D00F8BE8D /* AppTestHost */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = UITestDataBridgeTestHost;
+			exceptions = (
+				B395E2F52F34C45700F8BE8D /* Exceptions for "AppTestHost" folder in "AppTestHost" target */,
+			);
+			path = AppTestHost;
 			sourceTree = "<group>";
 		};
-		B3D296812F338B6D00E3D6E7 /* UITestDataBridgeUITests */ = {
+		B395E2F12F34C44D00F8BE8D /* AppTestHostUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = UITestDataBridgeUITests;
+			exceptions = (
+				B395E2F72F34C45D00F8BE8D /* Exceptions for "AppTestHostUITests" folder in "AppTestHostUITests" target */,
+			);
+			path = AppTestHostUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -50,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B32294982F33908E0011B073 /* UITestDataBridge in Frameworks */,
+				B395E2FA2F34C4F000F8BE8D /* UITestDataBridge in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B322949A2F3393EE0011B073 /* XCTestDataBridge in Frameworks */,
-				B3B4326E2F348C0000CB2D95 /* UITestDataBridge in Frameworks */,
+				B395E2FC2F34C4F000F8BE8D /* XCTestDataBridge in Frameworks */,
+				B395E2FE2F34C4F600F8BE8D /* UITestDataBridge in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,9 +94,9 @@
 		B3D2965E2F338B6B00E3D6E7 = {
 			isa = PBXGroup;
 			children = (
+				B395E2EF2F34C44D00F8BE8D /* AppTestHost */,
+				B395E2F12F34C44D00F8BE8D /* AppTestHostUITests */,
 				B322949D2F339D3C0011B073 /* TestPlans */,
-				B3D296692F338B6B00E3D6E7 /* UITestDataBridgeTestHost */,
-				B3D296812F338B6D00E3D6E7 /* UITestDataBridgeUITests */,
 				B3D296942F338BA500E3D6E7 /* Frameworks */,
 				B3D296682F338B6B00E3D6E7 /* Products */,
 			);
@@ -80,8 +105,8 @@
 		B3D296682F338B6B00E3D6E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B3D296672F338B6B00E3D6E7 /* UITestDataBridgeTestHost.app */,
-				B3D2967E2F338B6D00E3D6E7 /* UITestDataBridgeUITests.xctest */,
+				B3D296672F338B6B00E3D6E7 /* AppTestHost.app */,
+				B3D2967E2F338B6D00E3D6E7 /* AppTestHostUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,9 +121,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B3D296662F338B6B00E3D6E7 /* UITestDataBridgeTestHost */ = {
+		B3D296662F338B6B00E3D6E7 /* AppTestHost */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B3D296882F338B6D00E3D6E7 /* Build configuration list for PBXNativeTarget "UITestDataBridgeTestHost" */;
+			buildConfigurationList = B3D296882F338B6D00E3D6E7 /* Build configuration list for PBXNativeTarget "AppTestHost" */;
 			buildPhases = (
 				B3D296632F338B6B00E3D6E7 /* Sources */,
 				B3D296642F338B6B00E3D6E7 /* Frameworks */,
@@ -108,20 +133,17 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				B3D296692F338B6B00E3D6E7 /* UITestDataBridgeTestHost */,
-			);
-			name = UITestDataBridgeTestHost;
+			name = AppTestHost;
 			packageProductDependencies = (
-				B32294972F33908E0011B073 /* UITestDataBridge */,
+				B395E2F92F34C4F000F8BE8D /* UITestDataBridge */,
 			);
 			productName = UITestDataBridge;
-			productReference = B3D296672F338B6B00E3D6E7 /* UITestDataBridgeTestHost.app */;
+			productReference = B3D296672F338B6B00E3D6E7 /* AppTestHost.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B3D2967D2F338B6D00E3D6E7 /* UITestDataBridgeUITests */ = {
+		B3D2967D2F338B6D00E3D6E7 /* AppTestHostUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B3D2968E2F338B6D00E3D6E7 /* Build configuration list for PBXNativeTarget "UITestDataBridgeUITests" */;
+			buildConfigurationList = B3D2968E2F338B6D00E3D6E7 /* Build configuration list for PBXNativeTarget "AppTestHostUITests" */;
 			buildPhases = (
 				B3D2967A2F338B6D00E3D6E7 /* Sources */,
 				B3D2967B2F338B6D00E3D6E7 /* Frameworks */,
@@ -132,16 +154,13 @@
 			dependencies = (
 				B3D296802F338B6D00E3D6E7 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				B3D296812F338B6D00E3D6E7 /* UITestDataBridgeUITests */,
-			);
-			name = UITestDataBridgeUITests;
+			name = AppTestHostUITests;
 			packageProductDependencies = (
-				B32294992F3393EE0011B073 /* XCTestDataBridge */,
-				B3B4326D2F348C0000CB2D95 /* UITestDataBridge */,
+				B395E2FB2F34C4F000F8BE8D /* XCTestDataBridge */,
+				B395E2FD2F34C4F600F8BE8D /* UITestDataBridge */,
 			);
 			productName = UITestDataBridgeUITests;
-			productReference = B3D2967E2F338B6D00E3D6E7 /* UITestDataBridgeUITests.xctest */;
+			productReference = B3D2967E2F338B6D00E3D6E7 /* AppTestHostUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -163,7 +182,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B3D296622F338B6B00E3D6E7 /* Build configuration list for PBXProject "UITestDataBridge" */;
+			buildConfigurationList = B3D296622F338B6B00E3D6E7 /* Build configuration list for PBXProject "AppTestHost" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -173,15 +192,15 @@
 			mainGroup = B3D2965E2F338B6B00E3D6E7;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				B3D296992F338CD100E3D6E7 /* XCLocalSwiftPackageReference "../../UITestDataBridge" */,
+				B395E2F82F34C4F000F8BE8D /* XCLocalSwiftPackageReference "../../UITestDataBridge" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B3D296682F338B6B00E3D6E7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B3D296662F338B6B00E3D6E7 /* UITestDataBridgeTestHost */,
-				B3D2967D2F338B6D00E3D6E7 /* UITestDataBridgeUITests */,
+				B3D296662F338B6B00E3D6E7 /* AppTestHost */,
+				B3D2967D2F338B6D00E3D6E7 /* AppTestHostUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -223,7 +242,7 @@
 /* Begin PBXTargetDependency section */
 		B3D296802F338B6D00E3D6E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B3D296662F338B6B00E3D6E7 /* UITestDataBridgeTestHost */;
+			target = B3D296662F338B6B00E3D6E7 /* AppTestHost */;
 			targetProxy = B3D2967F2F338B6D00E3D6E7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -426,7 +445,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = UITestDataBridgeTestHost;
+				TEST_TARGET_NAME = AppTestHost;
 			};
 			name = Debug;
 		};
@@ -446,14 +465,14 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = UITestDataBridgeTestHost;
+				TEST_TARGET_NAME = AppTestHost;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B3D296622F338B6B00E3D6E7 /* Build configuration list for PBXProject "UITestDataBridge" */ = {
+		B3D296622F338B6B00E3D6E7 /* Build configuration list for PBXProject "AppTestHost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3D296862F338B6D00E3D6E7 /* Debug */,
@@ -462,7 +481,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B3D296882F338B6D00E3D6E7 /* Build configuration list for PBXNativeTarget "UITestDataBridgeTestHost" */ = {
+		B3D296882F338B6D00E3D6E7 /* Build configuration list for PBXNativeTarget "AppTestHost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3D296892F338B6D00E3D6E7 /* Debug */,
@@ -471,7 +490,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B3D2968E2F338B6D00E3D6E7 /* Build configuration list for PBXNativeTarget "UITestDataBridgeUITests" */ = {
+		B3D2968E2F338B6D00E3D6E7 /* Build configuration list for PBXNativeTarget "AppTestHostUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3D2968F2F338B6D00E3D6E7 /* Debug */,
@@ -483,26 +502,24 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		B3D296992F338CD100E3D6E7 /* XCLocalSwiftPackageReference "../../UITestDataBridge" */ = {
+		B395E2F82F34C4F000F8BE8D /* XCLocalSwiftPackageReference "../../UITestDataBridge" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../UITestDataBridge;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B32294972F33908E0011B073 /* UITestDataBridge */ = {
+		B395E2F92F34C4F000F8BE8D /* UITestDataBridge */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B3D296992F338CD100E3D6E7 /* XCLocalSwiftPackageReference "../../UITestDataBridge" */;
 			productName = UITestDataBridge;
 		};
-		B32294992F3393EE0011B073 /* XCTestDataBridge */ = {
+		B395E2FB2F34C4F000F8BE8D /* XCTestDataBridge */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B3D296992F338CD100E3D6E7 /* XCLocalSwiftPackageReference "../../UITestDataBridge" */;
 			productName = XCTestDataBridge;
 		};
-		B3B4326D2F348C0000CB2D95 /* UITestDataBridge */ = {
+		B395E2FD2F34C4F600F8BE8D /* UITestDataBridge */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B3D296992F338CD100E3D6E7 /* XCLocalSwiftPackageReference "../../UITestDataBridge" */;
+			package = B395E2F82F34C4F000F8BE8D /* XCLocalSwiftPackageReference "../../UITestDataBridge" */;
 			productName = UITestDataBridge;
 		};
 /* End XCSwiftPackageProductDependency section */
