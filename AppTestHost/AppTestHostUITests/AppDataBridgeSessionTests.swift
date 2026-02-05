@@ -29,7 +29,7 @@ final class AppDataBridgeSessionTests: XCTestCase {
         let app = appWithAttachedSession(session)
         let dataContent = "Hello, App!"
 
-        try session.publishData(dataContent.data(using: .utf8)!, forKey: "test_data")
+        try session.publish(dataContent, forKey: "test_data")
 
         app.launch()
 
@@ -74,9 +74,6 @@ final class AppDataBridgeSessionTests: XCTestCase {
     }
 
     private func dataReceivedFromApp(in session: UITestDataBridgeSession) -> String? {
-        guard let receivedData = try? XCTUnwrap(session.retrieveData(forKey: "app_test_data")) else {
-            return nil
-        }
-        return String(data: receivedData, encoding: .utf8)
+        return try? session.retrieve(forKey: "app_test_data")
     }
 }

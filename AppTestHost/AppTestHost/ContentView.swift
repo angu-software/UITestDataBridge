@@ -48,8 +48,7 @@ struct ContentView: View {
 
     private func sessionData() -> String {
         guard let session = currentBridgeSession(),
-              let data = try? session.retrieveData(forKey: "test_data"),
-              let stringValue = String(data: data, encoding: .utf8)else {
+              let stringValue: String = try? session.retrieve(forKey: "test_data") else {
             return "--"
         }
 
@@ -61,7 +60,7 @@ struct ContentView: View {
     }
 
     private func sendData() {
-        try? currentBridgeSession()?.publishData(dataToSend.data(using: .utf8)!,
+        try? currentBridgeSession()?.publish(dataToSend,
                                                  forKey: "app_test_data")
     }
 }
