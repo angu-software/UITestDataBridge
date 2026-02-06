@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant uiTest as UI Test Case
+    participant session as UITestDataBridgeSession
+    participant app as App Under Test
+
+    uiTest->>session: publish(data:forKey:)
+    session->>app: retrieveData(forKey:)
+
+    app->>session: publish(data:forKey:)
+    session->>uiTest: retrieveData(forKey:)

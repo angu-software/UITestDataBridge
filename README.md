@@ -106,21 +106,7 @@ XCTAssertEqual(received, "Hello, Test!")
 
 ## Data flow summary
 
-```text
-+-----------------+        +-------------------------+         +-----------------+
-|   UI Test Case  |  <-->  | UITestDataBridgeSession |  <-->   |  App Under Test |
-+-----------------+        +-------------------------+         +-----------------+
-        |                              |                               |
-        |  publish("foo")              |                               |
-        |----------------------------->|                               |
-        |                              |  retrieve("foo")           |
-        |                              |------------------------------>|
-        |                              |                               |
-        |  retrieve("bar")             |                               |
-        |<-----------------------------|                               |
-        |                              |  publish("bar")           |
-        |                              |<------------------------------|
-```
+![Data Flow Diagram]
 
 ## Features
 
@@ -183,8 +169,9 @@ The blog post demonstrated techniques for bridging data between tests and apps, 
 
 `UITestDataBridge` is released under the MIT License. See LICENSE for details.
 
----
+<!-- Links -->
 [Managing iOS UI Testing Fixtures]: https://pfandrade.me/blog/managing-ios-ui-testing-fixtures/
 [Paulo Andrade]: https://github.com/pfandrade/
 [UITestDataBridge project]: ./UITestDataBridge/
 [LICENSE]: ./LICENSE.md
+[Data Flow Diagram]: ./ReadmeResources/communicationSequence.png
