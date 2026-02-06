@@ -76,7 +76,7 @@ app.attach(bridgeSession)
 
 ```swift
 // Send any Codable data (string, object, etc.)
-try bridgeSession.publishData("Hello, App!", forKey: "data_from_test")
+try bridgeSession.publish("Hello, App!", forKey: "data_from_test")
 ```
 
 ### 5. Receive data in the app
@@ -89,7 +89,7 @@ func dataFromTest() -> String? {
         return nil 
     }
 
-    return bridgeSession.receiveData(forKey: "data_from_test")
+    return bridgeSession.retrieve(forKey: "data_from_test")
 }
 ````
 
@@ -97,10 +97,10 @@ func dataFromTest() -> String? {
 
 ```swift
 // App side
-bridgeSession.publishData("Hello, Test!", forKey: "data_from_app")
+bridgeSession.publish("Hello, Test!", forKey: "data_from_app")
 
 // Test side
-let received: String? = bridgeSession.receiveData(forKey: "data_from_app")
+let received: String? = bridgeSession.retrieve(forKey: "data_from_app")
 XCTAssertEqual(received, "Hello, Test!")
 ```
 
@@ -111,14 +111,14 @@ XCTAssertEqual(received, "Hello, Test!")
 |   UI Test Case  |  <-->  | UITestDataBridgeSession |  <-->   |  App Under Test |
 +-----------------+        +-------------------------+         +-----------------+
         |                              |                               |
-        |  publishData("foo")          |                               |
+        |  publish("foo")              |                               |
         |----------------------------->|                               |
-        |                              |  receiveData("foo")           |
+        |                              |  retrieve("foo")           |
         |                              |------------------------------>|
         |                              |                               |
-        |  receiveData("bar")          |                               |
+        |  retrieve("bar")             |                               |
         |<-----------------------------|                               |
-        |                              |  publishData("bar")           |
+        |                              |  publish("bar")           |
         |                              |<------------------------------|
 ```
 
